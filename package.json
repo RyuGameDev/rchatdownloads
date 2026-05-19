@@ -1,0 +1,9 @@
+{
+  "name": "rchat-download-page",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "check": "node --check api/download.js && node --check api/stats.js"
+  }
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#081116" />
+    <title>Download RChat APK</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="brand-row">
+            <img class="app-icon" src="/assets/iconapk.jpeg" alt="RChat" />
+            <div>
+              <p class="eyebrow">Android APK</p>
+              <h1>RChat</h1>
+            </div>
+          </div>
+
+          <p class="lead">
+            Chat ringan dengan grup, media, reply, notifikasi, dan tampilan yang dibuat nyaman buat dipakai harian.
+          </p>
+
+          <div class="download-panel">
+            <a class="download-button" href="/api/download" id="downloadButton">
+              <span class="download-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3v11m0 0 4-4m-4 4-4-4M5 17v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2" />
+                </svg>
+              </span>
+              <span>Download APK</span>
+            </a>
+            <div class="counter">
+              <span class="counter-value" id="downloadCount">0</span>
+              <span class="counter-label">total download</span>
+            </div>
+          </div>
+
+          <p class="note" id="counterNote">Mengambil statistik download...</p>
+        </div>
+
+        <div class="phone-wrap" aria-hidden="true">
+          <div class="phone">
+            <div class="phone-bar"></div>
+            <div class="chat-line incoming"></div>
+            <div class="chat-line incoming short"></div>
+            <div class="chat-line outgoing"></div>
+            <div class="media-card">
+              <div class="play"></div>
+            </div>
+            <div class="composer">
+              <div></div>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="details">
+        <article>
+          <h2>Versi APK</h2>
+          <p>Build Android siap install. Aktifkan izin install dari browser/file manager kalau Android meminta.</p>
+        </article>
+        <article>
+          <h2>Update Cepat</h2>
+          <p>Ganti URL APK dari env Vercel tanpa perlu mengubah desain halaman.</p>
+        </article>
+        <article>
+          <h2>Counter</h2>
+          <p>Total download dihitung saat tombol download dipencet, memakai Vercel KV/Upstash.</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
