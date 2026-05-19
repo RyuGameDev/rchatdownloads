@@ -22,7 +22,13 @@ async function kvCommand(command, key) {
   return data?.result ?? null;
 }
 
-module.exports = async function handler(_request, response) {
+module.exports = async function handler(request, response) {
+  if (request.method !== "GET" && request.method !== "HEAD") {
+    response.setHeader("Allow", "GET, HEAD");
+    response.status(405).json({ error: "Method not allowed" });
+    return;
+  }
+
   try {
     const result = await kvCommand("get", counterKey);
     const total = Number.parseInt(String(result ?? "0"), 10);

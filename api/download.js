@@ -1,5 +1,20 @@
 const counterKey = process.env.DOWNLOAD_COUNTER_KEY || "rchat:apk:downloads";
-const fallbackApkPath = "/rchat-release.apk";
+const allowedProtocols = new Set(["http:", "https:"]);
+
+function configuredApkUrl() {
+  const value = process.env.APK_DOWNLOAD_URL?.trim();
+
+  if (!value) {
+    return null;
+  }
+
+  try {
+    const url = new URL(value);
+    return allowedProtocols.has(url.protocol) ? url.toString() : null;
+  } catch {
+    return null;
+  }
+}
 
 async function incrementDownloadCount() {
   const url = process.env.KV_REST_API_URL;
@@ -23,8 +38,22 @@ async function incrementDownloadCount() {
   return data?.result ?? null;
 }
 
-module.exports = async function handler(_request, response) {
-  const apkUrl = process.env.APK_DOWNLOAD_URL || fallbackApkPath;
+module.exports = async function handler(request, response) {
+  if (request.method !== "GET" && request.method !== "HEAD") {
+    response.setHeader("Allow", "GET, HEAD");
+    response.status(405).json({ error: "Method not allowed" });
+    return;
+  }
+
+  const apkUrl = configuredApkUrl();
+
+  if (!apkUrl) {
+    response.setHeader("Cache-Control", "no-store");
+    response.status(503).json({
+      error: "APK download URL belum dikonfigurasi"
+    });
+    return;
+  }
 
   try {
     const total = await incrementDownloadCount();
@@ -38,6 +67,7 @@ module.exports = async function handler(_request, response) {
 
   response.writeHead(302, {
     "Cache-Control": "no-store",
+    "Referrer-Policy": "no-referrer",
     Location: apkUrl
   });
   response.end();
