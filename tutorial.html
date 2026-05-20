@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#081116" />
+    <meta name="theme-color" content="#05070d" />
     <meta
       name="description"
       content="Dokumentasi RChat untuk instalasi APK, akun, chat, grup, media, privasi, notifikasi, dan fitur asisten grup."
@@ -19,8 +19,27 @@
     <title>Dokumentasi RChat</title>
     <link rel="stylesheet" href="/styles.css" />
     <link rel="icon" href="/assets/iconapk.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <nav class="nav" aria-label="Navigasi utama">
+      <div class="nav-inner">
+        <a class="nav-brand" href="/">
+          <img src="/assets/iconapk.jpeg" alt="RChat" />
+          <span>RChat</span>
+        </a>
+        <div class="nav-actions">
+          <a class="nav-link" href="/">Beranda</a>
+          <a class="nav-cta" href="/api/download">Download</a>
+        </div>
+      </div>
+    </nav>
+
     <main class="docs-shell">
       <header class="docs-hero">
         <a class="docs-back" href="/">Kembali</a>
@@ -28,7 +47,7 @@
           <img class="app-icon" src="/assets/iconapk.jpeg" alt="RChat" />
           <div>
             <p class="eyebrow">Dokumentasi</p>
-            <h1>RChat</h1>
+            <h1 class="hero-title-grad">RChat</h1>
           </div>
         </div>
         <p class="lead docs-lead">
@@ -52,7 +71,7 @@
 
       <section class="docs-grid">
         <article class="docs-card" id="install">
-          <p class="docs-kicker">01</p>
+          <p class="docs-kicker">01 · INSTALASI</p>
           <h2>Instalasi APK</h2>
           <ol>
             <li>Download APK dari tombol resmi di halaman utama.</li>
@@ -64,7 +83,7 @@
         </article>
 
         <article class="docs-card" id="account">
-          <p class="docs-kicker">02</p>
+          <p class="docs-kicker">02 · AKUN</p>
           <h2>Akun dan Login</h2>
           <p>
             RChat memakai email dan password. Kamu tidak wajib memakai nomor HP, sehingga akun lebih fleksibel
@@ -79,7 +98,7 @@
         </article>
 
         <article class="docs-card" id="chat">
-          <p class="docs-kicker">03</p>
+          <p class="docs-kicker">03 · CHAT</p>
           <h2>Chat Pribadi</h2>
           <p>
             Chat mendukung pesan teks, reply, teruskan pesan, hapus pesan, status centang, presence online,
@@ -94,7 +113,7 @@
         </article>
 
         <article class="docs-card" id="media">
-          <p class="docs-kicker">04</p>
+          <p class="docs-kicker">04 · MEDIA</p>
           <h2>Foto, Video, dan Media</h2>
           <p>
             RChat mendukung pengiriman foto dan video dengan caption, preview, thumbnail, penyimpanan lokal,
@@ -109,7 +128,7 @@
         </article>
 
         <article class="docs-card" id="group">
-          <p class="docs-kicker">05</p>
+          <p class="docs-kicker">05 · GRUP</p>
           <h2>Grup dan Role</h2>
           <p>
             Pembuat grup otomatis menjadi superadmin. Ini membuat grup lebih aman karena kepemilikan tidak
@@ -124,7 +143,7 @@
         </article>
 
         <article class="docs-card" id="assistant">
-          <p class="docs-kicker">06</p>
+          <p class="docs-kicker">06 · ASISTEN</p>
           <h2>Asisten Grup</h2>
           <p>
             Asisten grup membantu superadmin mengelola aktivitas grup. Fitur ini disiapkan untuk grup yang
@@ -139,7 +158,7 @@
         </article>
 
         <article class="docs-card" id="privacy">
-          <p class="docs-kicker">07</p>
+          <p class="docs-kicker">07 · PRIVASI</p>
           <h2>Privasi dan Blokir</h2>
           <p>
             Pengaturan privasi membantu mengontrol siapa yang bisa melihat informasi dan siapa yang bisa
@@ -154,7 +173,7 @@
         </article>
 
         <article class="docs-card" id="notification">
-          <p class="docs-kicker">08</p>
+          <p class="docs-kicker">08 · NOTIFIKASI</p>
           <h2>Notifikasi</h2>
           <p>
             RChat memakai Firebase Cloud Messaging untuk notifikasi pesan. Saat izin notifikasi diberikan,
@@ -169,7 +188,7 @@
         </article>
 
         <article class="docs-card" id="plans">
-          <p class="docs-kicker">09</p>
+          <p class="docs-kicker">09 · PLANS</p>
           <h2>Free, Pro, dan Plus</h2>
           <p>
             Plan menentukan batas media, jumlah member grup, dan akses fitur lanjutan. Grup mengikuti plan
@@ -184,7 +203,7 @@
         </article>
 
         <article class="docs-card" id="troubleshoot">
-          <p class="docs-kicker">10</p>
+          <p class="docs-kicker">10 · BANTUAN</p>
           <h2>Troubleshooting</h2>
           <ul>
             <li>Jika gagal login, periksa koneksi internet dan alamat server aplikasi.</li>
@@ -197,10 +216,22 @@
       </section>
 
       <section class="docs-cta">
-        <h2>Siap mulai?</h2>
-        <p>Download APK resmi RChat dan ikuti dokumentasi ini sambil mencoba aplikasinya.</p>
-        <a class="download-button" href="/api/download">Download APK</a>
+        <p class="eyebrow">Siap Mulai</p>
+        <h2>Download RChat sekarang.</h2>
+        <p>Ikuti dokumentasi ini sambil mencoba aplikasinya langsung di perangkat Android kamu.</p>
+        <a class="download-button" href="/api/download">
+          <span class="download-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3v11m0 0 4-4m-4 4-4-4M5 17v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2" />
+            </svg>
+          </span>
+          <span>Download APK</span>
+        </a>
       </section>
     </main>
+
+    <footer class="footer">
+      <p>© <strong>RChat</strong> · Aplikasi chat ringan untuk Android.</p>
+    </footer>
   </body>
 </html>

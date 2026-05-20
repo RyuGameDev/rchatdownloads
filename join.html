@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#081116" />
+    <meta name="theme-color" content="#05070d" />
     <meta
       name="description"
       content="Buka undangan grup RChat. Kalau aplikasi belum terpasang, unduh APK resmi RChat untuk Android."
@@ -15,18 +15,29 @@
     <title>Undangan Grup RChat</title>
     <link rel="stylesheet" href="/styles.css" />
     <link rel="icon" href="/assets/iconapk.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main class="join-shell">
       <section class="join-card">
         <img class="join-icon" src="/assets/iconapk.jpeg" alt="RChat" />
         <p class="eyebrow">Undangan Grup</p>
-        <h1>RChat</h1>
+        <h1 class="hero-title-grad">RChat</h1>
         <p class="lead join-lead" id="joinStatus">Mencoba membuka aplikasi RChat...</p>
 
         <div class="join-actions">
           <button class="download-button join-open-button" id="openAppButton" type="button">
-            Buka di RChat
+            <span class="download-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 12h14m0 0-5-5m5 5-5 5" />
+              </svg>
+            </span>
+            <span>Buka di RChat</span>
           </button>
           <a class="join-secondary-button" href="/api/download" id="joinDownloadButton">Download APK</a>
         </div>

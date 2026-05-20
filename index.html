@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#081116" />
+    <meta name="theme-color" content="#05070d" />
     <meta
       name="description"
       content="Download APK resmi RChat untuk Android. Chat, grup, media, reply, dan notifikasi dalam satu aplikasi ringan."
@@ -19,21 +19,42 @@
     <title>Download RChat APK</title>
     <link rel="stylesheet" href="/styles.css" />
     <link rel="icon" href="/assets/iconapk.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <nav class="nav" aria-label="Navigasi utama">
+      <div class="nav-inner">
+        <a class="nav-brand" href="/">
+          <img src="/assets/iconapk.jpeg" alt="RChat" />
+          <span>RChat</span>
+        </a>
+        <div class="nav-actions">
+          <a class="nav-link" href="/tutorial">Dokumentasi</a>
+          <a class="nav-cta" href="/api/download">Download</a>
+        </div>
+      </div>
+    </nav>
+
     <main class="page-shell">
       <section class="hero">
         <div class="hero-copy">
-          <div class="brand-row">
-            <img class="app-icon" src="/assets/iconapk.jpeg" alt="RChat" />
-            <div>
-              <p class="eyebrow">Android APK</p>
-              <h1>RChat</h1>
-            </div>
-          </div>
+          <span class="hero-badge">
+            <em>Baru</em> Tersedia untuk Android
+          </span>
+
+          <h1>
+            Chat ringan,<br />
+            <span class="hero-title-grad">tetap terkendali.</span>
+          </h1>
 
           <p class="lead">
-            Chat ringan dengan grup, media, reply, notifikasi, dan tampilan yang dibuat nyaman buat dipakai harian.
+            RChat dibuat untuk percakapan harian dan komunitas. Grup tanpa drama, media tanpa ribet, notifikasi tepat
+            sasaran, semuanya dalam satu aplikasi ringan.
           </p>
 
           <div class="release-row" aria-label="Informasi versi">
@@ -45,7 +66,7 @@
           <div class="download-panel">
             <div class="counter">
               <span class="counter-value" id="downloadCount">0</span>
-              <span class="counter-label">total download</span>
+              <span class="counter-label">Total download</span>
             </div>
             <a class="download-button" href="/api/download" id="downloadButton">
               <span class="download-icon" aria-hidden="true">
@@ -55,7 +76,7 @@
               </span>
               <span>Download APK</span>
             </a>
-            <a class="docs-button" href="/tutorial">Tutorial Dokumentasi</a>
+            <a class="docs-button" href="/tutorial">Lihat dokumentasi lengkap</a>
           </div>
 
           <p class="note" id="counterNote">Mengambil statistik download...</p>
@@ -63,16 +84,37 @@
 
         <div class="phone-wrap" aria-hidden="true">
           <div class="phone">
-            <div class="phone-bar"></div>
-            <div class="chat-line incoming"></div>
-            <div class="chat-line incoming short"></div>
-            <div class="chat-line outgoing"></div>
-            <div class="media-card">
-              <div class="play"></div>
-            </div>
-            <div class="composer">
-              <div></div>
-              <span></span>
+            <div class="phone-screen">
+              <div class="phone-bar">
+                <div class="phone-avatar"></div>
+                <div class="phone-bar-text">
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="phone-body">
+                <div class="chat-line incoming">
+                  <span class="chat-bar"></span>
+                  <span class="chat-bar"></span>
+                </div>
+                <div class="chat-line incoming short">
+                  <span class="chat-bar"></span>
+                </div>
+                <div class="chat-line outgoing">
+                  <span class="chat-bar"></span>
+                  <span class="chat-bar"></span>
+                </div>
+                <div class="media-card">
+                  <div class="play"></div>
+                </div>
+                <div class="chat-line incoming short">
+                  <span class="chat-bar"></span>
+                </div>
+              </div>
+              <div class="composer">
+                <div></div>
+                <span></span>
+              </div>
             </div>
           </div>
         </div>
@@ -83,7 +125,7 @@
           <p class="eyebrow">Keunggulan</p>
           <h2>Kenapa RChat?</h2>
           <p>
-            RChat dibuat untuk chat harian dan komunitas yang butuh aplikasi ringan, jelas, dan tidak ribet.
+            Dibuat untuk chat harian dan komunitas yang butuh aplikasi ringan, jelas, dan tidak ribet.
           </p>
         </div>
 
@@ -133,6 +175,10 @@
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <p>© <strong>RChat</strong> · Aplikasi chat ringan untuk Android.</p>
+    </footer>
 
     <script src="/app.js" defer></script>
   </body>
