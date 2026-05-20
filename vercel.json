@@ -1,9 +1,14 @@
 {
   "cleanUrls": true,
+
   "rewrites": [
     {
-      "source": "/join-group/:token*",
-      "destination": "/join.html"
+      "source": "/join-group/:token",
+      "destination": "/join?token=:token"
+    },
+    {
+      "source": "/join-group/:token/:rest*",
+      "destination": "/join?token=:token"
     }
   ],
   "headers": [
