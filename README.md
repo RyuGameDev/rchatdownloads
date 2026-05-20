@@ -5,6 +5,7 @@ Production-ready download page untuk APK RChat, dibuat untuk Vercel.
 Fitur:
 
 - Landing page responsive untuk download APK.
+- Wrapper invite grup: `https://rchat.ryudev.site/join-group/<token>` mencoba membuka aplikasi via `rchat://join-group/<token>`, lalu fallback ke download APK.
 - Counter total download yang persistent dengan Vercel KV atau Upstash Redis REST.
 - API download yang aman: tidak redirect kalau `APK_DOWNLOAD_URL` belum dikonfigurasi.
 - Metadata versi dan ukuran APK dari environment variable.

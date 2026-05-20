@@ -4,6 +4,6 @@
   "private": true,
   "scripts": {
     "dev": "vercel dev",
-    "check": "node --check api/download.js && node --check api/stats.js && node --check api/release.js"
+    "check": "node --check api/download.js && node --check api/stats.js && node --check api/release.js && node --check app.js && node --check join.js"
   }
 }

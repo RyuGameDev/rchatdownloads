@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#081116" />
+    <meta
+      name="description"
+      content="Buka undangan grup RChat. Kalau aplikasi belum terpasang, unduh APK resmi RChat untuk Android."
+    />
+    <meta property="og:title" content="Undangan Grup RChat" />
+    <meta property="og:description" content="Ketuk untuk membuka undangan grup di aplikasi RChat." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/iconapk.jpeg" />
+    <title>Undangan Grup RChat</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="icon" href="/assets/iconapk.jpeg" />
+  </head>
+  <body>
+    <main class="join-shell">
+      <section class="join-card">
+        <img class="join-icon" src="/assets/iconapk.jpeg" alt="RChat" />
+        <p class="eyebrow">Undangan Grup</p>
+        <h1>RChat</h1>
+        <p class="lead join-lead" id="joinStatus">Mencoba membuka aplikasi RChat...</p>
+
+        <div class="join-actions">
+          <button class="download-button join-open-button" id="openAppButton" type="button">
+            Buka di RChat
+          </button>
+          <a class="join-secondary-button" href="/api/download" id="joinDownloadButton">Download APK</a>
+        </div>
+
+        <p class="note join-note">
+          Kalau aplikasi tidak otomatis terbuka, tekan tombol buka. Jika belum punya aplikasinya, download APK resmi.
+        </p>
+      </section>
+    </main>
+
+    <script src="/join.js" defer></script>
+  </body>
+</html>

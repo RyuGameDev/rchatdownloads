@@ -1,5 +1,16 @@
 {
   "cleanUrls": true,
+  "functions": {
+    "api/*.js": {
+      "runtime": "nodejs22.x"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/join-group/:token",
+      "destination": "/join.html"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
