@@ -129,6 +129,32 @@ h1 {
   filter: brightness(1.08);
 }
 
+.docs-button {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  color: #dbe7ea;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 900;
+  justify-content: center;
+  min-height: 58px;
+  padding: 0 18px;
+  text-decoration: none;
+  transition:
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.docs-button:hover {
+  background: rgba(255, 255, 255, 0.11);
+}
+
+.docs-button:active {
+  transform: scale(0.98);
+}
+
 .download-icon {
   align-items: center;
   background: rgba(255, 255, 255, 0.18);
@@ -252,6 +278,135 @@ h1 {
 .join-note {
   line-height: 1.45;
   max-width: 340px;
+}
+
+.docs-shell {
+  margin: 0 auto;
+  max-width: 1120px;
+  min-height: 100vh;
+  padding: 28px clamp(18px, 4vw, 42px) 48px;
+}
+
+.docs-hero {
+  padding: 18px 0 26px;
+}
+
+.docs-back {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 999px;
+  color: #dbe7ea;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 900;
+  margin-bottom: 24px;
+  min-height: 38px;
+  padding: 0 14px;
+  text-decoration: none;
+}
+
+.docs-lead {
+  max-width: 760px;
+}
+
+.docs-index {
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+  padding: 12px;
+  position: sticky;
+  top: 12px;
+  z-index: 2;
+}
+
+.docs-index a {
+  background: rgba(8, 17, 22, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  color: #c5d3d7;
+  font-size: 12px;
+  font-weight: 900;
+  padding: 8px 11px;
+  text-decoration: none;
+}
+
+.docs-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.docs-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.068), rgba(255, 255, 255, 0.035)),
+    #101b21;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 20px;
+  scroll-margin-top: 92px;
+}
+
+.docs-kicker {
+  color: #31d6bc;
+  font-size: 12px;
+  font-weight: 950;
+  margin: 0 0 8px;
+}
+
+.docs-card h2,
+.docs-cta h2 {
+  font-size: 22px;
+  margin: 0 0 10px;
+}
+
+.docs-card p,
+.docs-card li,
+.docs-cta p {
+  color: #aebdc3;
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.55;
+}
+
+.docs-card p {
+  margin: 0 0 12px;
+}
+
+.docs-card p:last-child {
+  margin-bottom: 0;
+}
+
+.docs-card ul,
+.docs-card ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.docs-card li + li {
+  margin-top: 7px;
+}
+
+.docs-cta {
+  align-items: flex-start;
+  background:
+    linear-gradient(135deg, rgba(18, 191, 160, 0.16), rgba(111, 66, 245, 0.18)),
+    rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 22px;
+}
+
+.docs-cta p {
+  margin: 0;
 }
 
 .phone-wrap {
@@ -466,6 +621,12 @@ h1 {
     width: 100%;
   }
 
+  .docs-button {
+    border-radius: 14px;
+    min-height: 52px;
+    width: 100%;
+  }
+
   .download-icon {
     border-radius: 10px;
     height: 32px;
@@ -568,6 +729,58 @@ h1 {
 
   .details p {
     font-size: 13px;
+  }
+
+  .docs-shell {
+    padding: 18px 14px 32px;
+  }
+
+  .docs-hero {
+    padding-top: 12px;
+  }
+
+  .docs-index {
+    border-radius: 16px;
+    margin-bottom: 12px;
+    overflow-x: auto;
+    padding: 10px;
+    position: static;
+    scrollbar-width: none;
+  }
+
+  .docs-index::-webkit-scrollbar {
+    display: none;
+  }
+
+  .docs-index a {
+    flex: 0 0 auto;
+    font-size: 11px;
+    padding: 7px 10px;
+  }
+
+  .docs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .docs-card {
+    border-radius: 14px;
+    padding: 16px;
+  }
+
+  .docs-card h2,
+  .docs-cta h2 {
+    font-size: 19px;
+  }
+
+  .docs-card p,
+  .docs-card li,
+  .docs-cta p {
+    font-size: 14px;
+  }
+
+  .docs-cta {
+    border-radius: 16px;
+    padding: 18px;
   }
 }
 

@@ -3,6 +3,16 @@ const openButton = document.querySelector("#openAppButton");
 const downloadButton = document.querySelector("#joinDownloadButton");
 
 function inviteTokenFromPath() {
+  const queryToken = new URLSearchParams(window.location.search).get("token");
+
+  if (queryToken) {
+    try {
+      return decodeURIComponent(queryToken);
+    } catch {
+      return queryToken;
+    }
+  }
+
   const match = window.location.pathname.match(/\/join-group\/([^/?#\s]+)/i);
 
   if (!match?.[1]) {
